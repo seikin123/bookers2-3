@@ -5,4 +5,6 @@ class Book < ApplicationRecord
 	validates :body, presence: true, length: { in: 1..200 }
 	# いいね機能
 	has_many :favorites, dependent: :destroy
+	# コメント機能
+	has_many :book_comments, dependent: :destroy
 end
